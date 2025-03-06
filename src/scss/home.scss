@@ -1,3 +1,541 @@
 //====================================================================================================
 
+//
+.text-box {
+    &__title {
+        &_small-- {
+            font-size: toRem(18);
+        }
+    }
+
+    &__text {
+        &_small-- {
+            position: relative;
+            font-size: toRem(16);
+            &::before {
+                content: "";
+                position: absolute;
+                width: toRem(50);
+                height: toRem(1);
+                bottom: -43px;
+                left: 50%;
+                transform: translate(-50%, 0px);
+                background-color: rgb(132, 135, 137);
+            }
+        }
+        @media (max-width: $tablet) {
+            &::before {
+                content: "";
+                bottom: -20px;
+            }
+        }
+    }
+}
+//===================================================================================================
+
+// about-us
+.about-us {
+    max-width: toRem(1125);
+    padding: toRem(120) toRem(20) toRem(145) toRem(20);
+    margin: 0px auto;
+    @media (max-width: $mobile) {
+        padding: toRem(40) toRem(20) toRem(50) toRem(20);
+    }
+}
+.text-box {
+    &__icon {
+        display: flex;
+        justify-content: center;
+        margin: toRem(0) toRem(0) toRem(35) toRem(0);
+    }
+
+    &__title {
+        font-size: 18px;
+        font-family: "Lato";
+        color: rgb(53, 55, 56);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        margin: toRem(0) toRem(0) toRem(40) toRem(0);
+    }
+
+    &__text {
+        font-size: 18px;
+        font-family: "Lato";
+        color: rgb(132, 135, 137);
+        line-height: 1.889;
+        text-align: center;
+    }
+}
+
+// bike
+
+.bike {
+    &__row {
+        @media (min-width: $mobile) {
+            display: flex;
+        }
+    }
+
+    &__left-image {
+        position: relative;
+        padding: 0px 0px 37.5% 0px;
+        flex: 0 1 66.6875%;
+        @media (max-width: $mobile) {
+            padding: 0px 0px 70% 0px;
+        }
+        & img {
+            position: absolute;
+            z-index: 20;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__left-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 30;
+        &::before {
+            content: "";
+            position: absolute;
+            width: toRem(113);
+            height: toRem(118);
+            top: 50%;
+            left: 50%;
+            background: url("@img/bike-01/Logo.png") 0 0 no-repeat;
+            transform: translate(-50%, -50%);
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+
+    &__right-box {
+        flex: 0 1 33.3125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text-box {
+        @media (min-width: $tablet) {
+            padding: toRem(62) toRem(60) toRem(100) toRem(60);
+        }
+        @media (max-width: $tablet) {
+            padding: toRem(20) toRem(20) toRem(50) toRem(20);
+        }
+        @media (max-width: $mobile) {
+            padding: toRem(40) toRem(10) toRem(60) toRem(10);
+        }
+    }
+
+    &__right-image {
+        position: relative;
+        padding: 0px 0px 37.525% 0px;
+        @media (max-width: $mobile) {
+            padding: 0px 0px 50% 0px;
+        }
+        & img {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            z-index: 11;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 25px solid rgb(255, 255, 255);
+            transform: rotate(-180deg) translate(50%, 0px);
+        }
+    }
+    &__right-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 35;
+    }
+}
+
+// bike-two
+
+.bike-two {
+    &__row {
+        @media (min-width: $mobile) {
+            display: flex;
+        }
+    }
+
+    &__left-box {
+        flex: 0 1 33.3125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text-box {
+        @media (min-width: $tablet) {
+            padding: toRem(62) toRem(60) toRem(100) toRem(60);
+        }
+        @media (max-width: $tablet) {
+            padding: toRem(20) toRem(20) toRem(50) toRem(20);
+        }
+        @media (max-width: $mobile) {
+            padding: toRem(40) toRem(10) toRem(60) toRem(10);
+        }
+    }
+
+    &__left-image {
+        position: relative;
+        padding: 0px 0px 37.525% 0px;
+        @media (max-width: $mobile) {
+            display: none;
+        }
+        & img {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            z-index: 11;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 25px solid rgb(255, 255, 255);
+            transform: rotate(-180deg) translate(50%, 0px);
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+
+    &__left-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 35;
+    }
+    &__right-image {
+        position: relative;
+        padding: 0px 0px 37.525% 0px;
+        flex: 1 1 66.875%;
+        @media (max-width: $mobile) {
+            padding: 0px 0px 70% 0px;
+        }
+        & img {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+    &__right-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 35;
+        &::before {
+            content: "";
+            position: absolute;
+            width: toRem(185);
+            height: toRem(160);
+            top: 50%;
+            left: 50%;
+            background: url("@img/bike-02/Logo2.png") 0 0 no-repeat;
+            transform: translate(-50%, -50%);
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+}
+
+// bike-three
+
+.bike-three {
+    &__row {
+        @media (min-width: $mobile) {
+            display: flex;
+        }
+    }
+
+    &__left-image {
+        position: relative;
+        padding: 0px 0px 37.525% 0px;
+        flex: 1 1 33.4375%;
+        @media (max-width: $mobile) {
+            padding: 0px 0px 70% 0px;
+        }
+        & img {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+
+    &__left-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 35;
+        &::before {
+            content: "";
+            position: absolute;
+            width: toRem(215);
+            height: toRem(100);
+            top: 60%;
+            left: 50%;
+            background: url("@img/bike-03/Logo3.png") 0 0 no-repeat;
+            transform: translate(-50%, -50%);
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+
+    &__center-box {
+        flex: 0 1 33.125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text-box {
+        @media (min-width: $tablet) {
+            padding: toRem(62) toRem(60) toRem(100) toRem(60);
+        }
+        @media (max-width: $tablet) {
+            padding: toRem(20) toRem(20) toRem(50) toRem(20);
+        }
+        @media (max-width: $mobile) {
+            padding: toRem(40) toRem(10) toRem(60) toRem(10);
+        }
+    }
+    &__center-image {
+        position: relative;
+        padding: 0px 0px 37.525% 0px;
+        @media (max-width: $mobile) {
+            display: none;
+        }
+        & img {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            z-index: 11;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 25px solid rgb(255, 255, 255);
+            transform: rotate(-180deg) translate(50%, 0px);
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+
+    &__center-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 35;
+    }
+
+    &__right-image {
+        position: relative;
+        padding: 0px 0px 37.525% 0px;
+        flex: 1 1 33.4375%;
+        @media (max-width: $mobile) {
+            display: none;
+        }
+        & img {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+
+    &__right-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 35;
+
+        &:hover {
+            transition: all 0.3s;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 30;
+                background-color: #6dae916c;
+            }
+        }
+    }
+}
+
 //====================================================================================================
