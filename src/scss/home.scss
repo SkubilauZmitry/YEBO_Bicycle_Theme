@@ -759,6 +759,9 @@
     max-width: 570px;
     padding: toRem(100) toRem(15) toRem(115) toRem(15);
     margin: 0px auto;
+    @media (max-width: $mobile) {
+        padding: toRem(70) toRem(15) toRem(70) toRem(15);
+    }
     &__image {
         text-align: center;
         margin: toRem(0) toRem(0) toRem(44) toRem(0);

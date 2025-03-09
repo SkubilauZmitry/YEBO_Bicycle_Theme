@@ -1,3 +1,94 @@
 //====================================================================================================
+.footer {
+    background-color: #f7f7f7;
+    padding: toRem(100) toRem(0) toRem(100) toRem(0);
+    @media (max-width: $mobile) {
+        padding: toRem(50) toRem(15) toRem(50) toRem(15);
+    }
+    &__container {
+        max-width: 1140px;
+        padding: toRem(0) toRem(15) toRem(0) toRem(15);
+        margin: 0px auto;
+    }
+
+    &__row {
+        @media (min-width: $mobile) {
+            display: flex;
+        }
+    }
+
+    &__column {
+        &_center-- {
+            display: flex;
+            justify-content: center;
+        }
+        @media (max-width: $mobile) {
+            text-align: center;
+            margin: toRem(0) toRem(0) toRem(40) toRem(0);
+            &:last-child {
+                margin: toRem(0) toRem(0) toRem(0) toRem(0);
+            }
+        }
+        @media (min-width: $mobile) {
+            flex: 0 1 33.333%;
+
+            &_right-- {
+                text-align: right;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        font-family: "Lato";
+        color: rgb(132, 135, 137);
+        font-weight: bold;
+        line-height: 1.117;
+        @media (max-width: $mobile) {
+            line-height: 1.875;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        font-family: "Lato";
+        color: rgb(132, 135, 137);
+        font-weight: bold;
+        line-height: 1.117;
+        @media (max-width: $mobile) {
+            line-height: 1.875;
+        }
+    }
+
+    &__image {
+        margin: toRem(0) toRem(10) toRem(0) toRem(0);
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+
+    &__text-right {
+        position: relative;
+        font-size: 14px;
+        font-family: "Lato";
+        color: rgb(132, 135, 137);
+        font-style: italic;
+        line-height: 1.286;
+        text-align: right;
+        padding: toRem(0) toRem(80) toRem(0) toRem(0);
+        @media (max-width: $mobile) {
+            padding: toRem(0) toRem(65) toRem(0) toRem(0);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: toRem(60);
+            height: toRem(43);
+            top: -5px;
+            left: 95px;
+            background: url("@img/footer/Logo.png") 0 0 no-repeat;
+        }
+    }
+}
 
 //====================================================================================================
