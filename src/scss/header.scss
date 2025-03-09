@@ -22,7 +22,8 @@
         @media (max-width: $mobile) {
             background-color: #56c0c9;
             padding: toRem(80) toRem(0) toRem(80) toRem(0);
-            height: toRem(500);
+            height: 100%;
+            overflow: auto;
         }
     }
 

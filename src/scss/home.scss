@@ -614,4 +614,196 @@
     margin: toRem(0) toRem(10) toRem(0) toRem(10);
 }
 
+.block__more {
+    font-size: 20px;
+    color: rgb(132, 135, 137);
+    font-style: italic;
+    line-height: 1.417;
+    text-align: center;
+    margin: toRem(20) toRem(0) toRem(100) toRem(0);
+    @media (max-width: $mobile) {
+        margin: toRem(20) toRem(0) toRem(40) toRem(0);
+    }
+}
+
+.block {
+    flex: 1 1 100%;
+}
+
+// shop
+
+.shop {
+    &__row {
+        @media (min-width: $mobile) {
+            display: flex;
+        }
+    }
+
+    &__column {
+        flex: 0 1 33.333%;
+
+        &_one {
+        }
+
+        &_two {
+            display: flex;
+        }
+
+        &_three {
+        }
+    }
+
+    &__block-image {
+        display: flex;
+        &_three {
+            display: flex;
+        }
+    }
+
+    &__image {
+        position: relative;
+        padding: 0px 0px 48.002% 0px;
+        &_one-one {
+            flex: 0 1 50%;
+        }
+
+        &_one-two {
+            flex: 0 1 50%;
+        }
+
+        &_one {
+            flex: 0 1 50%;
+        }
+
+        &_two {
+            flex: 0 1 50%;
+        }
+
+        &_three {
+        }
+
+        &_three-one {
+            flex: 0 1 50%;
+        }
+
+        &_three-two {
+            flex: 0 1 50%;
+        }
+        & a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            &:hover {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: #6dae916c;
+                &::before {
+                    content: "";
+                    position: relative;
+                    width: 110px;
+                    height: 65px;
+                    top: 50%;
+                    left: 50%;
+                    background: url("@img/shop/Icon .png") 0 0 no-repeat;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        & img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+}
+.shop {
+    &__box-btn {
+        background-color: #282f35;
+        height: toRem(200);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $mobile) {
+            height: toRem(150);
+        }
+    }
+
+    &__button {
+    }
+
+    &__link {
+        font-size: 14px;
+        font-family: "Lato";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        padding: toRem(10) toRem(20) toRem(10) toRem(20);
+        &:hover {
+            border: 1px solid #ffffff;
+        }
+    }
+}
+
+// mail-box
+.mail-box {
+    max-width: 570px;
+    padding: toRem(100) toRem(15) toRem(115) toRem(15);
+    margin: 0px auto;
+    &__image {
+        text-align: center;
+        margin: toRem(0) toRem(0) toRem(44) toRem(0);
+    }
+
+    &__title {
+        font-size: 24px;
+        font-family: "Lato";
+        color: rgb(132, 135, 137);
+        font-style: italic;
+        line-height: 1.417;
+        text-align: center;
+        margin: toRem(0) toRem(0) toRem(36) toRem(0);
+    }
+}
+
+.form {
+    @media (min-width: $mobile) {
+        display: flex;
+    }
+}
+
+.input {
+    font-family: "Lato";
+    color: rgba(146, 146, 146, 0.502);
+    font-style: italic;
+    line-height: 2.5;
+}
+.button {
+    font-family: "Lato";
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: #64c29e;
+    text-transform: uppercase;
+    line-height: 2.5;
+    padding: toRem(0) toRem(30) toRem(0) toRem(30);
+    margin: toRem(20) toRem(0) toRem(20) toRem(0);
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
+
+    @media (min-width: $mobile) {
+        font-size: 24px;
+        margin: toRem(0) toRem(10) toRem(0) toRem(10);
+    }
+}
+
 //====================================================================================================
