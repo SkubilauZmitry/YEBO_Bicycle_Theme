@@ -547,11 +547,6 @@
     @media (max-width: $mobile) {
         padding: toRem(50) toRem(15) toRem(50) toRem(15);
     }
-    &__slider {
-    }
-
-    &__wrapper {
-    }
 
     &__icon {
         text-align: center;
@@ -587,15 +582,6 @@
         display: flex;
         justify-content: center;
     }
-
-    &__slide {
-    }
-
-    &__img {
-    }
-
-    &__image {
-    }
 }
 
 .slider {
@@ -605,8 +591,7 @@
         flex-direction: column;
     }
 }
-.swiper-bike {
-}
+
 .swiper-button-prev {
     margin: toRem(0) toRem(10) toRem(0) toRem(0);
 }
@@ -642,14 +627,8 @@
     &__column {
         flex: 0 1 33.333%;
 
-        &_one {
-        }
-
         &_two {
             display: flex;
-        }
-
-        &_three {
         }
     }
 
@@ -677,9 +656,6 @@
 
         &_two {
             flex: 0 1 50%;
-        }
-
-        &_three {
         }
 
         &_three-one {
@@ -734,9 +710,6 @@
         @media (max-width: $mobile) {
             height: toRem(150);
         }
-    }
-
-    &__button {
     }
 
     &__link {
